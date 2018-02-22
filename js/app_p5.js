@@ -1,4 +1,8 @@
 // kod projektu snake
+var s;
+var scl = 20;
+
+
 function setup() {
   createCanvas(600, 600);
   s = new Snake();
@@ -19,23 +23,5 @@ function keyPressed() {                       //regowanie na wciśnięty kalwisz
     s.dir (1, 0);
   } else if (keyCode === LEFT_ARROW) {
     s.dir (-1, 0);
-  }
-}
-
-
-function Snake() {
-  this.x = 0;
-  this.y = 0;
-  this.xspeed = 1;
-  this.yspeed = 0;
-
-  this.update = function() {
-    this.x = this.x + this.xspeed;
-    this.y = this.y + this.yspeed;
-  }
-
-  this.show = function() {
-    fill(255);
-    rect(this.x, this.y, 10, 10);
   }
 }
