@@ -21,12 +21,13 @@ function pickLocation() {
 
 function draw() {
   background(255, 204, 0);
+
+  if (s.eat(jedzenie)){
+  pickLocation();
+  }
+
   s.update();
   s.show();
-
-if (s.eat(jedzenie)){
-pickLocation();
-}
 
   fill(255, 0, 100);
   rect(jedzenie.x, jedzenie.y, scl, scl);  //pojawianie się jedzenia
