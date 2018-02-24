@@ -8,14 +8,14 @@ function setup() {
   createCanvas(600, 600);
   s = new Snake();
   frameRate(10);                             //spowalnianie wężą
-  jedzenie = createVector(random(width), random(height));
+  pickLocation();
 }
 
 function pickLocation() {
   var cols = floor(width/scl);
   var rows = floor(height/scl);
   jedzenie = createVector(floor(random(cols)), floor(random(rows)));
-  food.mult(scl);
+  jedzenie.mult(scl);
 }
 
 
@@ -23,6 +23,10 @@ function draw() {
   background(255, 204, 0);
   s.update();
   s.show();
+
+if (s.eat(jedzenie)){
+pickLocation();
+}
 
   fill(255, 0, 100);
   rect(jedzenie.x, jedzenie.y, scl, scl);  //pojawianie się jedzenia
