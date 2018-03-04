@@ -1,11 +1,14 @@
 // kod projektu snake
 var s;
-var scl = 20;
+var scl = 60;
 
 var jedzenie;
 
 function setup() {
-  createCanvas(600, 600);
+  var cnv = createCanvas(600, 600);
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y);
   s = new Snake();
   frameRate(10);                             //spowalnianie wężą
   pickLocation();
