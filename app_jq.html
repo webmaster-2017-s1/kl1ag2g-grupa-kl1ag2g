@@ -21,14 +21,21 @@
     <![endif]-->
 
     <!-- Tutaj dodajesz swój kod -->
-    <h1>Projekt [wpisz nazwę]</h1>
-    <div>
-      <ul class="menu">
-        <li><a href="index.html">Strona główna</a></li>
-        <li><a href="app_jq.html">Wersja jQuery</a></li>
-        <li><a href="app_p5.html">Wersja p5js</a></li>
-      </ul>
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+
+  <div class="sidebar">
+  <img src="img/logo.png">
+  <ul class="menu">
+    <li><a href="index.html">Strona Główna</a></li>
+    <li><a href="app_jq.html">Wersja jQuery</a></li>
+    <li><a href="app_p5.html">Wersja p5js</a></li>
+  </ul>
+  </div>
+
 
 
 
@@ -43,6 +50,17 @@
     <script src="js/main.js"></script>
     <!--kod aplikacji w jQuery-->
     <script src="js/app_jq.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".menu-icon").click(function(){
+                $(".menu-icon").toggleClass("active");
+                });
+
+                $(".menu-icon").click(function(){
+                    $(".sidebar").toggleClass("active");
+                    });
+              });
+    </script>
 
   </body>
 </html>

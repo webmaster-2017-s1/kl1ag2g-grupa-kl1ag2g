@@ -22,14 +22,22 @@
 
     <!-- Tutaj dodajesz swój kod -->
     <!-- Tutaj dodajesz swój kod -->
-    <h1>Projekt Snake</h1>
-    <div>
-      <ul class="menu">
-        <li><a href="index.html">Strona główna</a></li>
-        <li><a href="app_jq.html">Wersja jQuery</a></li>
-        <li><a href="app_p5.html">Wersja p5js</a></li>
-      </ul>
+
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+
+<div class="sidebar">
+ <img src="img/logo.png">
+  <ul class="menu">
+    <li><a href="index.html">Strona Główna</a></li>
+    <li><a href="app_jq.html">Wersja jQuery</a></li>
+    <li><a href="app_p5.html">Wersja p5js</a></li>
+  </ul>
+</div>
+
 
     <!-- skrypt umożliwiający sprawdzanie możliwośći przeglądarki -->
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
@@ -47,6 +55,17 @@
     <!--kod aplikacji w p5js-->
     <script src="js/app_p5.js"></script>
     <script src="js/snake.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".menu-icon").click(function(){
+                $(".menu-icon").toggleClass("active");
+                });
+
+                $(".menu-icon").click(function(){
+                    $(".sidebar").toggleClass("active");
+                    });
+              });
+    </script>
 
   </body>
 </html>
