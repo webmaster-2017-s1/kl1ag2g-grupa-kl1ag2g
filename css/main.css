@@ -252,18 +252,11 @@ body, html {
   display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+#snakeCanvas {
+  text-align: center;
+  position: relative;
+  top: 10vh;
+}
 
 /* ==========================================================================
    Helper classes
