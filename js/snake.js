@@ -39,6 +39,7 @@ function Snake() {
     }
     if (this.total >= 1) {
       this.tail[this.total - 1] = createVector(this.x, this.y);
+      console.log(i+2);
     }
 
     this.x = this.x + this.xspeed * scl;

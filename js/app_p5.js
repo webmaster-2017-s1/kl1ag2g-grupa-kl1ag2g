@@ -5,11 +5,14 @@ var scl = 20;
 var food;
 
 function setup() {
-  createCanvas(600, 600);
+  var cnv = createCanvas(600, 600);
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y);
   s = new Snake();
   frameRate(15);                            // spowalnianie węża
   pickLocation();
-
+  console.log('sterowanie W, A, S, D; punkty wyświetlają się w konsoli');
 }
 
 function pickLocation() {
