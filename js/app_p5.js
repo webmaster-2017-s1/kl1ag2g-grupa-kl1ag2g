@@ -4,7 +4,9 @@ var scl = 20;
 
 var food;
 
+
 function setup() {
+
   var cnv = createCanvas(600, 600);
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
@@ -13,6 +15,7 @@ function setup() {
   frameRate(15);                            // spowalnianie węża
   pickLocation();
   console.log('sterowanie W, A, S, D; punkty wyświetlają się w konsoli');
+
 }
 
 function pickLocation() {
@@ -21,7 +24,6 @@ function pickLocation() {
   food = createVector(floor(random(cols)), floor(random(rows)));
   food.mult(scl);
 }
-
 
 function draw() {
   background(255, 204, 0);

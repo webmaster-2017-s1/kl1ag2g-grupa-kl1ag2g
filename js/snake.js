@@ -39,8 +39,10 @@ function Snake() {
     }
     if (this.total >= 1) {
       this.tail[this.total - 1] = createVector(this.x, this.y);
-      console.log(i+2);
+      console.log (i + 2);
     }
+
+
 
     this.x = this.x + this.xspeed * scl;
     this.y = this.y + this.yspeed * scl;
@@ -55,6 +57,5 @@ function Snake() {
       rect(this.tail[i].x, this.tail[i].y, scl, scl);
     }
     rect(this.x, this.y, scl, scl);
-
   };
 }
