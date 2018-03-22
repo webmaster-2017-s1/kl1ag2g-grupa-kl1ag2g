@@ -49,5 +49,7 @@ function keyPressed() {                   //reagowanie na wciśnięty klawisz
     s.dir(1, 0);
   } else if (keyCode === 65) {
     s.dir(-1, 0);
+  } else if (keyCode === 82) {
+    frameRate(15);
   }
 }
