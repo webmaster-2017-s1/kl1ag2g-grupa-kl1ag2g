@@ -43,6 +43,8 @@ function Snake() {
     if (this.total >= 1) {
       this.tail[this.total - 1] = createVector(this.x, this.y);
       console.log (i + 2);
+      textSize(32);
+      text(i+2, 10, 30);
     }
 
 
