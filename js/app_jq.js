@@ -70,3 +70,31 @@ $(document).ready(function(){
 		else if(d == "left") nx--;
 		else if(d == "up") ny--;
 		else if(d == "down") ny++;
+        
+		//Restart gry po uderzeniu w ścianę
+		//Dodanie restartu przy uderzeniu w ciało snake'a
+		//Gra resetuje się, gdy snake uderzy głowem w swoje ciało
+		if(nx == -1 || nx == w/cw || ny == -1 || ny == h/cw || check_collision(nx, ny, snake_array))
+		{
+			//Restart gry
+			init();
+			
+			return;
+		}
+		
+		//Czas na stworzenie jedzenia
+		//Jeśli nowa pozycja głowy jest równa pozycji jedzenia,
+		//tworzona jest "nowa" głowa zamiast poruszania ogona
+		if(nx == food.x && ny == food.y)
+		{
+			var tail = {x: nx, y: ny};
+			score++;
+			//Tworzenie jedzenia
+			create_food();
+		}
+		else
+		{
+			var tail = snake_array.pop(); 
+			tail.x = nx; tail.y = ny;
+		}
+		//Snake może teraz "połykać" jedzenie.
