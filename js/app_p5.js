@@ -12,7 +12,7 @@ function setup() {
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
   s = new Snake();
-  frameRate(fr);                            // spowalnianie węża
+  frameRate(fr);                            // prędkość węża
   pickLocation();
   console.log('sterowanie W, A, S, D; punkty wyświetlają się w konsoli');
 
@@ -26,9 +26,9 @@ function pickLocation() {
 }
 
 function draw() {
-  background(255, 204, 0);
+  background(255, 204, 0); //tło
 
-  if (s.eat(food)) {
+  if (s.eat(food)) {      //funkcja powodująca pojawienie się nowego jedzenia po zjedzeniu
     pickLocation();
   }
   s.death();
