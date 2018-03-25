@@ -1,7 +1,7 @@
 // kod projektu snake
 var s;
 var scl = 20;
-
+var fr = 20; // startowe FPS
 var food;
 
 
@@ -12,7 +12,7 @@ function setup() {
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
   s = new Snake();
-  frameRate(15);                            // spowalnianie węża
+  frameRate(fr);                            // spowalnianie węża
   pickLocation();
   console.log('sterowanie W, A, S, D; punkty wyświetlają się w konsoli');
 
@@ -40,16 +40,28 @@ function draw() {
   rect(food.x, food.y, scl, scl);         // pojawianie się jedzenia
 }
 
+
+
 function keyPressed() {                   //reagowanie na wciśnięty klawisz
-  if (keyCode === 87 ) {
-    s.dir(0, -1);
-  } else if (keyCode === 83) {
-    s.dir(0, 1);
-  } else if (keyCode === 68) {
-    s.dir(1, 0);
-  } else if (keyCode === 65) {
-    s.dir(-1, 0);
-  } else if (keyCode === 82) {
-    frameRate(15);
-  }
-}
+   if (keyCode === 87) {
+     s.dir(0, -1);
+   } else if (keyCode === 83) {
+     s.dir(0, 1);
+   } else if (keyCode === 68) {
+     s.dir(1, 0);
+   } else if (keyCode === 65) {
+     s.dir(-1, 0);
+  }  else if (keyCode === 82) {
+  frameRate(15);
+}else if (keyCode === 219) { // nacisnieto klawisz [
+    if (fr >= 2) {fr = fr-1}; // min fps 1
+    textSize(30);
+    text("FPS:"+fr, 1, 30);
+    frameRate(fr);
+  } else if (keyCode === 221) { // nacisnieto klawisz ]
+    if (fr <= 29) {fr = fr+1}; // max fps 30
+    textSize(30);
+    text("FPS:"+fr, 1, 30);
+    frameRate(fr);
+   }
+ }
