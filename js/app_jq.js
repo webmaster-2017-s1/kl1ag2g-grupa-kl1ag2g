@@ -6,8 +6,7 @@ $(document).ready(function(){
 	var w = $("#canvas").width();
 	var h = $("#canvas").height();
   
-  
-	//Lets save the cell width in a variable for easy control
+
 	var cw = 10;
 	var d;
 	var food;
@@ -15,7 +14,8 @@ $(document).ready(function(){
 	
 	//tworzenie snake'a
 	var snake_array; //tablica tworząca snake'a
-	
+
+        
 	function init()
 	{
 		d = "right"; //domyślny kierunek
@@ -98,3 +98,61 @@ $(document).ready(function(){
 			tail.x = nx; tail.y = ny;
 		}
 		//Snake może teraz "połykać" jedzenie.
+        
+        	snake_array.unshift(tail); 
+		
+		for(var i = 0; i < snake_array.length; i++)
+		{
+			var c = snake_array[i];
+			
+			paint_cell(c.x, c.y);
+		}
+		
+		//rysowanie jedzenia
+		paint_cell_f(food.x, food.y);
+		//rysowanie wyniku
+		var score_text = "Score: " + score;
+		ctx.fillText(score_text, 5, h-5);
+	}
+	
+	//rysowanie komórek, z których składa się snake
+	function paint_cell(x, y)
+	{
+		ctx.fillStyle = "green";
+		ctx.fillRect(x*cw, y*cw, cw, cw);
+		ctx.strokeStyle = "black";
+		ctx.strokeRect(x*cw, y*cw, cw, cw);
+	}
+    
+    	function paint_cell_f(x, y)
+	{
+		ctx.fillStyle = "red";
+		ctx.fillRect(x*cw, y*cw, cw, cw);
+		ctx.strokeStyle = "black";
+		ctx.strokeRect(x*cw, y*cw, cw, cw);
+	}
+	
+	function check_collision(x, y, array)
+	{
+		
+		//ta fumkcja sprawdza czy podane koordynaty x i y istnieją w tablicy
+		for(var i = 0; i < array.length; i++)
+		{
+			if(array[i].x == x && array[i].y == y)
+			 return true;
+		}
+		return false;
+	}
+	
+	//sterowanie
+	$(document).keydown(function(e){
+		var key = e.which;
+		
+		if(key == "65" && d != "right") d = "left";
+		else if(key == "87" && d != "down") d = "up";
+		else if(key == "68" && d != "left") d = "right";
+		else if(key == "83" && d != "up") d = "down";
+		
+	})
+	
+})
