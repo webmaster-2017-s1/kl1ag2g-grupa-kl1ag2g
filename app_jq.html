@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Projekt [wpisz nazwę]</title>
+    <title>SNAKE wersja js</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,9 +11,9 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-      
+
   </head>
-  <body>
+  <body style="background-image:url(img/grafika-1.jpeg)">
     <!--[if lte IE 9]>
     <p class="browserupgrade">
         Używasz <strong>przestarzałej</strong> przeglądarki.
@@ -38,6 +38,10 @@
   </div>
 
 
+  <audio controls autoplay loop>
+  <source src="muzyka.mp3" type="audio/mpeg">
+  </audio>
+
 
 
     <!-- skrypt umożliwiający sprawdzanie możliwośći przeglądarki -->
@@ -61,11 +65,11 @@
                     $(".sidebar").toggleClass("active");
                     });
               });
-        
-    
+
+
     </script>
 
-      <canvas id="canvas" width="450" height="450"></canvas>
-      
+      <canvas id="canvas" width="600" height="600" class="canvasjs"></canvas>
+
   </body>
 </html>

@@ -258,6 +258,19 @@ body, html {
   top: 10vh;
 }
 
+audio {
+  display: none;
+}
+
+.canvasjs {
+  position: absolute;
+  text-align: center;
+  display: inline;
+  top: 10%;
+  left:30%;
+
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
