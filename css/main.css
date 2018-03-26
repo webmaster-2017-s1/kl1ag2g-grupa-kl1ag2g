@@ -120,17 +120,17 @@ body, html {
 }
 
 .pimg1 {
-  background-image: url("../img/grafika-1.jpeg");
+  background-image: url("../img/grafika-11.jpg");
   min-height: 100%;
 }
 
 .pimg2 {
-  background-image: url("../img/grafika-2.jpeg");
+  background-image: url("../img/grafika-22.jpg");
   min-height: 400px;
 }
 
 .pimg3 {
-  background-image: url("../img/grafika-3.jpeg");
+  background-image: url("../img/grafika-33.jpg");
   min-height: 400px;
 }
 
