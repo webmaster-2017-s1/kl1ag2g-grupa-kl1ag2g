@@ -1,7 +1,7 @@
 // kod projektu snake
 var s;
-var scl = 20;
-var fr = 20; // startowe FPS
+var scl = 15;
+var fr = 13; // startowe FPS
 var food;
 
 
@@ -26,7 +26,7 @@ function pickLocation() {
 }
 
 function draw() {
-  background(255, 204, 0); //tło
+  background(50, 50, 50); //tło
 
   if (s.eat(food)) {      //funkcja powodująca pojawienie się nowego jedzenia po zjedzeniu
     pickLocation();
@@ -36,7 +36,7 @@ function draw() {
   s.show();
 
 
-  fill(255, 0, 100);
+  fill(231, 27, 80);
   rect(food.x, food.y, scl, scl);         // pojawianie się jedzenia
 }
 
@@ -52,7 +52,7 @@ function keyPressed() {                   //reagowanie na wciśnięty klawisz
    } else if (keyCode === 65) {
      s.dir(-1, 0);
   }  else if (keyCode === 82) {
-  frameRate(15);
+  frameRate(13);
 }else if (keyCode === 219) { // nacisnieto klawisz [
     if (fr >= 2) {fr = fr-1}; // min fps 1
     textSize(30);

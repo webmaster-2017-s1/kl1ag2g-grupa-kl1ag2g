@@ -16,7 +16,7 @@ function Snake() {
     }
   };
 
-  this.dir = function(x, y) {                       //funkcja 
+  this.dir = function(x, y) {                       //funkcja
     this.xspeed = x;
     this.yspeed = y;
   };
@@ -56,8 +56,8 @@ function Snake() {
     this.y = constrain(this.y, 0, height - scl);
   };
 
-  this.show = function() {                              //funkcja pokazująca kształt wężą, jego kolor i kolor ogona
-    fill('rgb(0,255,0)');
+  this.show = function() {                              //funkcja pokazująca kształt węża, jego kolor i kolor ogona
+    fill(238, 232, 225)
     for (var i = 0; i < this.tail.length; i++) {
       rect(this.tail[i].x, this.tail[i].y, scl, scl);
     }

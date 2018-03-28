@@ -7,7 +7,7 @@ $(document).ready(function(){
 	var h = $("#canvas").height();
 
 
-	var cw = 10;
+	var cw = 15;
 	var d;
 	var food;
 	var score;
@@ -55,7 +55,7 @@ $(document).ready(function(){
 	{
 		//rysowanie tla w kazdej klatce
 		//rysowanie canvasu
-		ctx.fillStyle = "rgb(255, 204, 0)";
+		ctx.fillStyle = "rgb(50, 50, 50)";
 		ctx.fillRect(0, 0, w, h);
 		ctx.strokeStyle = "black";
 		ctx.strokeRect(0, 0, w, h);
@@ -118,7 +118,7 @@ $(document).ready(function(){
 	//rysowanie komórek, z których składa się snake
 	function paint_cell(x, y)
 	{
-		ctx.fillStyle = "green";
+		ctx.fillStyle = "rgb(238, 232, 225)";
 		ctx.fillRect(x*cw, y*cw, cw, cw);
 		ctx.strokeStyle = "black";
 		ctx.strokeRect(x*cw, y*cw, cw, cw);
