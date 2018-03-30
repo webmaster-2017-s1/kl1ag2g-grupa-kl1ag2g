@@ -10,7 +10,7 @@ $(document).ready(function(){
 	var cw = 15;
 	var d;
 	var food;
-	var score;
+	var score = 0;
 
 	//tworzenie snake'a
 	var snake_array; //tablica tworząca snake'a
@@ -114,6 +114,8 @@ $(document).ready(function(){
 		var score_text = "Score: " + score;
 		ctx.fillText(score_text, 5, h-5);
 	}
+    
+    
 
 	//rysowanie komórek, z których składa się snake
 	function paint_cell(x, y)
