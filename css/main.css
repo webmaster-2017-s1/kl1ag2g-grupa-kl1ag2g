@@ -271,6 +271,39 @@ audio {
 
 }
 
+.control {
+  position: relative;
+  top: 10%;
+  float: right;
+  right: 15vh;
+  width: 40vh;
+  height: 600px;
+  background: rgb(50, 50, 50);
+  transition: .5s;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.control_li {
+  list-style: none;
+  font-family: sans-serif;
+  color: #fff;
+  padding: 10px;
+  float: left;
+}
+
+.rose {
+  display: inline;
+  font-weight: bold;
+  color: #e71b50;
+  margin: 0;
+  padding: 2px;
+  font-size: 20px;
+
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

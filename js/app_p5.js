@@ -28,7 +28,7 @@ function pickLocation() {
 function draw() {
   background(50, 50, 50); //tło
 
-  if (s.eat(food)) {      //funkcja powodująca pojawienie się nowego jedzenia po zjedzeniu
+  if (s.eat(food)) {      //funkcja powodująca pojawienie się nowego jedzenia po poprzedniego zjedzeniu
     pickLocation();
   }
   s.death();
@@ -53,12 +53,12 @@ function keyPressed() {                   //reagowanie na wciśnięty klawisz
      s.dir(-1, 0);
   }  else if (keyCode === 82) {
   frameRate(13);
-}else if (keyCode === 219) { // nacisnieto klawisz [
+}else if (keyCode === 88) { // nacisnieto klawisz [
     if (fr >= 2) {fr = fr-1}; // min fps 1
     textSize(30);
     text("FPS:"+fr, 1, 30);
     frameRate(fr);
-  } else if (keyCode === 221) { // nacisnieto klawisz ]
+  } else if (keyCode === 90) { // nacisnieto klawisz ]
     if (fr <= 29) {fr = fr+1}; // max fps 30
     textSize(30);
     text("FPS:"+fr, 1, 30);
