@@ -57,7 +57,7 @@ function Snake() {
   };
 
   this.show = function() {                              //funkcja pokazująca kształt węża, jego kolor i kolor ogona
-    fill(238, 232, 225)
+    fill(238, 232, 225);
     for (var i = 0; i < this.tail.length; i++) {
       rect(this.tail[i].x, this.tail[i].y, scl, scl);
     }

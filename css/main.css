@@ -145,7 +145,7 @@ body, html {
 }
 
 .section-dark {
-  background-color: #152638;
+  background-color: rgb(50, 50, 50);
   color: #ddd;
 }
 
@@ -161,7 +161,7 @@ body, html {
 }
 
 .ptext .border{
-  background-color: #152638;
+  background-color: rgb(50, 50, 50);
   color: #fff;
   padding: 20px;
 
@@ -175,7 +175,7 @@ body, html {
   width: 50px;
   height: 44px;
   padding: 4px 8px;
-  background: #152638;
+  background: rgb(50, 50, 50);
   box-sizing: border-box;
   cursor: pointer;
   opacity: 0.8;
@@ -197,7 +197,7 @@ body, html {
   left: -300px;
   width: 300px;
   height: 100vh;
-  background: #152638;
+  background: rgb(50, 50, 50);
   transition: .5s;
   padding: 20px;
   text-align: center;
@@ -302,6 +302,35 @@ audio {
   padding: 2px;
   font-size: 20px;
 
+}
+
+.sect{
+
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.btn {
+  text-align: center;
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #fb2525;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  margin-top: 25px;
+}
+
+.sect:hover{
+  cursor: pointer;
+  background: rgb(111, 9, 9);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: rgb(111, 9, 9);
 }
 
 /* ==========================================================================
