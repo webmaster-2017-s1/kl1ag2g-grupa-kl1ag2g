@@ -3,7 +3,9 @@
 
 # TEAM
 
-    <name> -- <role> -- <email>
+    Micha³ Parzych -- layout strony, poprawki wersji p5js -- michal.parzych@lo1.sandomierz.pl
+    Hubert ¯uber -- wersja jQuery -- hubert.zuber@lo1.sandomierz.pl
+    Piotr Wojtoñ -- wersja p5js -- piotr.wojton@lo1.sandomierz.pl
 
 # THANKS
 
