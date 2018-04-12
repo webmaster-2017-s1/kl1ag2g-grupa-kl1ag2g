@@ -43,7 +43,7 @@ function draw() {
 
 
 function keyPressed() {                   //reagowanie na wciśnięty klawisz
-   if (keyCode === 87) {
+  if (keyCode === 87) {
      s.dir(0, -1);
    } else if (keyCode === 83) {
      s.dir(0, 1);
@@ -53,12 +53,12 @@ function keyPressed() {                   //reagowanie na wciśnięty klawisz
      s.dir(-1, 0);
   }  else if (keyCode === 82) {
   frameRate(13);
-}else if (keyCode === 88) { // nacisnieto klawisz [
+}else if (keyCode === 88) { // nacisnieto klawisz X
     if (fr >= 2) {fr = fr-1}; // min fps 1
     textSize(30);
     text("FPS:"+fr, 1, 30);
     frameRate(fr);
-  } else if (keyCode === 90) { // nacisnieto klawisz ]
+  } else if (keyCode === 90) { // nacisnieto klawisz Z
     if (fr <= 29) {fr = fr+1}; // max fps 30
     textSize(30);
     text("FPS:"+fr, 1, 30);
